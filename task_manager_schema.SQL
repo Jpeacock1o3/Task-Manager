@@ -45,18 +45,3 @@ CREATE TABLE Notifications (
     type VARCHAR(20),
     FOREIGN KEY (task_id) REFERENCES Tasks(id)
 );
-
-INSERT INTO Users (username, email, hashed_password) VALUES
-('jadenp', 'jaden@example.com', 'hashed_pw_1');
-
-INSERT INTO Tasks (user_id, title, description, due_date, priority) VALUES
-(1, 'Build backend schema', 'Create models and relationships', '2025-05-25', 'high');
-
-INSERT INTO Labels (name, color) VALUES
-('Work', '#FF5733');
-
-INSERT INTO TaskLabels (task_id, label_id) VALUES
-(1, 1);
-
-INSERT INTO Notifications (task_id, send_time, status, type) VALUES
-(1, '2025-05-24 08:00:00', 'pending', 'email');
