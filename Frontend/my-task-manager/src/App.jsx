@@ -17,6 +17,7 @@ function App() {
   }, []);
 
   const handleSave = async (task) => {
+    console.log("Sending task to backend:", task);
     if (taskToEdit) {
       await axios.put(`${API_URL}/${taskToEdit.id}`, task);
     } else {

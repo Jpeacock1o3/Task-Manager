@@ -15,7 +15,8 @@ const TaskForm = ({ onSave, taskToEdit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave({ title, description, due_date: dueDate });
+    const isoDate = new Date(dueDate).toISOString();
+    onSave({ title, description, due_date: isoDate });
     setTitle('');
     setDescription('');
     setDueDate('');
