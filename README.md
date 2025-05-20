@@ -1,5 +1,7 @@
 # Task Manager
 
+(This project is in the basic stages and is a work in progress)
+
 A full-stack task management application built with React (frontend) and FastAPI (backend), enabling users to create, view, update, and delete tasks efficiently.
 
 ## Features
